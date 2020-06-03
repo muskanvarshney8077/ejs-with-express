@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>ejs header</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="box" id="heading">
+<h1>It is a <%= kindOfDay %></h1>
+</div>
+<div class="box">
+
+<%for (var i=0;i< newListItems.length; i++) {%>
+<div class="item">
+<input type="checkbox">
+<p><%= newListItems[i] %></p>
+</div>
+<%}%>
+<form action="/" method="POST">
+<input type="text" name="newItem" placeholder="add new item" autocomplete="off">
+<button type="submit" name="button">+</button>
+</form>
+</div>
+
+</body>
+</html>
